@@ -1,4 +1,4 @@
 .env
 faiss_index/*
 data/*
-myenv.env
+myenv

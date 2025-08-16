@@ -1,0 +1,12 @@
+streamlit>=1.20
+langchain>=0.0.300
+openai>=0.27.0
+faiss-cpu>=1.7.4; platform_system != 'Darwin'
+sentence-transformers>=2.2.2
+python-dotenv>=1.0.0
+pdfplumber>=0.8.0
+langchain-community==0.0.29
+langchain-huggingface
+requests>=2.28
+beautifulsoup4>=4.12.2
+langchain-groq>=0.0.4
