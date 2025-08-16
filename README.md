@@ -47,8 +47,7 @@ Persistence and index behavior
 
 LLM backends
 - Groq: if `GROQ_API_KEY` is present and `langchain-groq` installed, the app will use Groq via `ChatGroq`.
-- OpenAI: if `OPENAI_API_KEY` is present and `langchain` installed, the app can use OpenAI as a fallback.
-- The app tries a few invocation patterns (.invoke, direct call, .generate) and extracts text from common response shapes. If your LLM returns an unfamiliar structure, enable the debug option (I can add it) to view the raw response.
+- The app tries a few invocation patterns (.invoke, direct call, .generate) and extracts text from common response shapes.
 
 Example queries
 - "What is diabetic retinopathy?"
@@ -62,16 +61,8 @@ Troubleshooting
 rm -rf faiss_index
 # then ingest again via the app or CLI
 ```
-- If the LLM call fails or returns an unexpected object, enable debug output (I can add this) and share the raw output so I can update the extractor.
 
 Known limitations
 - The summarization and reranker require additional packages (CrossEncoder models, heavy HF models) and may download large models on first run.
 - FAISS persistence uses pickle; consider alternatives for production.
-
-Next steps (suggested)
-- Add a debug toggle to show raw LLM responses (helpful for adapting to Groq responses).
-- Add UI buttons for explicit "Save index" / "Reload index" and show index document counts.
-- Add support for folder ingestion (recursively ingest a directory).
-
-If you'd like, I can add the debug toggle and the explicit Save/Reload buttons next — tell me which one to implement first.
 
