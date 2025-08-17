@@ -62,12 +62,11 @@ rm -rf faiss_index
 # then ingest again via the app or CLI
 ```
 
-Here is the link for the live demo : https://naive-rag-chatbot.streamlit.app/ (😅 wake up might take a little time...)
-
-
-
-
 Known limitations
 - The summarization and reranker require additional packages (CrossEncoder models, heavy HF models) and may download large models on first run.
 - FAISS persistence uses pickle; consider alternatives for production.
+
+
+Here is the link for the live demo : https://naive-rag-chatbot.streamlit.app/ (😅 wake up might take a little time...)
+
 
